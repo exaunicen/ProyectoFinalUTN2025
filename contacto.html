@@ -7,6 +7,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Staatliches&display=swap"
       rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="./css/font-awesome-4.7.0/css/font-awesome.min.css" />
+
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/estilos.css" />
   </head>
@@ -27,8 +31,60 @@
         </div>
       </div>
     </header>
-    <main class="contenedor">
-      <h2>CONTACTO</h2>
+    <main class="contenedor seccion">
+      <h2>Contacto</h2>
+      <img
+        class="img-contacto"
+        src="./img/encuentra.jpg"
+        alt="Imagen de portada contacto" />
+      <div class="contactos">
+        <div class="contacto">
+          <form class="formulario">
+            <p>
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Nombre y Apellido" />
+            </p>
+            <p>
+              <label for="email">Email</label>
+              <input type="text" name="email" placeholder="Name@tucorreo.com" />
+            </p>
+            <p>
+              <label for="telefono">Telefono</label>
+              <input
+                type="text"
+                name="telefono"
+                placeholder="+54 9 223 5131672" />
+            </p>
+            <p>
+              <label for="mensaje">Mensaje</label>
+              <textarea name="mensaje" id="mensaje"></textarea>
+            </p>
+            <p>
+              <input type="submit" value="Enviar" />
+            </p>
+          </form>
+        </div>
+        <div class="datos">
+          <h2>Otras vias de comunicaciones</h2>
+          <p>
+            Tambien puede contactarse con nosotros usando los siguientes medios
+          </p>
+          <ul>
+            <li>Telefono : +54 9 223 5131672</li>
+            <li>Email : contacto@bienesraices.com.ar</li>
+            <li>
+              <div class="redes">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
     <footer class="pie seccion">
       <div class="contenedor contenido-pie">

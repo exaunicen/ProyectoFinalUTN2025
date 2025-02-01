@@ -22,6 +22,12 @@ img {
     width: 100%;
     display: block;
 }
+.borde img {
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+}
 
 h1,
 h2,
@@ -54,6 +60,9 @@ h4 {
 .seccion {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
+}
+.contenido-centrado {
+    max-width: 80rem;
 }
 
 /* Inicio Header */
@@ -117,14 +126,15 @@ h4 {
 
 .icono {
     text-align: center;
-}
-.icono img {
-    height: 10rem;
-}
-.icono h3 {
-    text-transform: uppercase;
+    img {
+        height: 10rem;
+    }
+    h3 {
+        text-transform: uppercase;
+    }
 }
 .boton {
+    width: auto;
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
@@ -140,7 +150,6 @@ h4 {
     background-color: darkgoldenrod;
 }
 .boton-verde {
-    width: auto;
     background-color: #71b100;
     margin-top: 2rem;
 }
@@ -171,13 +180,23 @@ h4 {
     display: flex;
     gap: 2rem;
 }
+.info-meta {
+    span {
+        color: #e08709;
+    }
+}
+
 .entrada-blog {
-    margin-bottom: 2rem;
+    margin: 5rem 0;
     display: flex;
     gap: 2rem;
 }
+.imagen img {
+    width: 30rem;
+    border-radius: 0.5rem;
+}
+
 .texto-entrada {
-    text-align: center;
     a {
         color: #000000;
         display: block;
@@ -187,12 +206,12 @@ h4 {
         margin: 0;
         line-height: 1.4;
     }
-    span {
-        color: #e08709;
-    }
+}
+.testimoniales {
+    width: 40%;
 }
 .testimonial {
-    height: 45rem;
+    height: auto;
     background-color: #71b100;
     font-size: 2.4rem;
     padding: 5rem;
@@ -223,6 +242,78 @@ h4 {
 }
 
 /* Fin Pagina Nosotros */
+
+/* Inicio Contacto */
+
+.contactos {
+    background-color: #ffffff;
+    display: flex;
+    gap: 5rem;
+}
+.contacto {
+    width: 50%;
+}
+
+.formulario {
+    p {
+        display: flex;
+        flex-direction: column;
+    }
+    p label {
+        min-width: 8rem;
+        display: flex;
+    }
+    p input,
+    p textarea {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 0.5rem;
+        border: 0.1rem solid #999;
+        padding: 0.6rem 1rem;
+        font-size: 1.4rem;
+        margin: 0.5rem 0;
+    }
+    p {
+        &:nth-child(4) {
+            align-items: start;
+        }
+    }
+    textarea {
+        resize: none;
+        height: 20rem;
+    }
+}
+.formulario input[type="submit"] {
+    width: 30%;
+    background-color: #71b100;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.formulario input[type="submit"]:hover {
+    background-color: #4d7c00;
+}
+
+.datos {
+    p {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    ul li {
+        font-size: 1.3rem;
+    }
+}
+.redes {
+    i {
+        margin: 1rem;
+    }
+}
+
+/* Fin Contacto */
 
 /* Inicio Footer */
 .pie {
@@ -256,12 +347,19 @@ h4 {
     .texto-nosotros {
         width: 100%;
     }
+    .contactos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contacto {
+        width: 100%;
+    }
 }
 @media (max-width: 480px) {
     .navegacion a {
         display: flex;
         flex-direction: column;
-        margin: 0 15rem 0 15rem;
+        margin: 0 13rem 0 13rem;
     }
     .contenido-encabezado h1 {
         top: 15rem;
@@ -273,5 +371,14 @@ h4 {
             display: block;
             margin-top: 2rem;
         }
+    }
+    .testimoniales {
+        width: auto;
+    }
+    .img-contacto {
+        max-height: 25rem;
+    }
+    .formulario input[type="submit"] {
+        width: auto;
     }
 }
